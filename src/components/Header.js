@@ -40,10 +40,10 @@ const Header = () => {
           </li>
           <li>
             <Link
-              href="/movie"
+              href="/movies"
               className="mr-5 hover:text-blue-200 cursor-pointer"
             >
-              Movie
+              Movies
             </Link>
           </li>
           <li>
