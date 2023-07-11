@@ -4,7 +4,7 @@ import React from "react";
 const page = () => {
   return (
     <>
-      <Hero />
+      <Hero title={"LET'S WATCH MOVIE TOGETHER"} imageUrl={"home.svg"} />
     </>
   );
 };

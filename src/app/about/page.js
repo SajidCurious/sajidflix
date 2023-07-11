@@ -1,10 +1,11 @@
+import Hero from "@/components/Hero";
 import React from "react";
 
 const about = () => {
   return (
-    <div>
-      <h1>About Page</h1>
-    </div>
+    <>
+      <Hero title={"OUR STORY"} imageUrl={"/about1.svg"} />
+    </>
   );
 };
 
