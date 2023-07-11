@@ -1,6 +1,6 @@
 import React from "react";
 
-const page = () => {
+const page = async () => {
   const url = process.env.API_KEY;
   const options = {
     method: "GET",
@@ -9,6 +9,10 @@ const page = () => {
       "X-RapidAPI-Host": "netflix54.p.rapidapi.com",
     },
   };
+  const res = await fetch(url, options);
+  const data = await res.json();
+  console.log(data);
+
   return <div>movies</div>;
 };
 
