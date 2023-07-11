@@ -29,17 +29,26 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <Link href="/" className="mr-5 hover:text-blue-200 cursor-pointer">
+            <Link
+              href="/about"
+              className="mr-5 hover:text-blue-200 cursor-pointer"
+            >
               About
             </Link>
           </li>
           <li>
-            <Link href="/" className="mr-5 hover:text-blue-200 cursor-pointer">
+            <Link
+              href="/movie"
+              className="mr-5 hover:text-blue-200 cursor-pointer"
+            >
               Movie
             </Link>
           </li>
           <li>
-            <Link href="/" className="mr-5 hover:text-blue-200 cursor-pointer">
+            <Link
+              href="/contact"
+              className="mr-5 hover:text-blue-200 cursor-pointer"
+            >
               Contact
             </Link>
           </li>
