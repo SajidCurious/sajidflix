@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const page = async () => {
@@ -13,7 +14,12 @@ const page = async () => {
   const data = await res.json();
   console.log(data);
 
-  return <div>movies</div>;
+  return (
+    <>
+      <h1>movies</h1>
+      <Link href="/movies/hhhhhh">go to</Link>
+    </>
+  );
 };
 
 export default page;
