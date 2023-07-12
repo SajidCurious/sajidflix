@@ -1,3 +1,4 @@
+import MovieCard from "@/components/MovieCard";
 import Link from "next/link";
 import React from "react";
 
@@ -12,13 +13,18 @@ const page = async () => {
   };
   const res = await fetch(url, options);
   const data = await res.json();
+  const main_data = data.titles;
   console.log(data);
 
   return (
-    <>
-      <h1>movies</h1>
-      <Link href="/movies/hhhhhh">go to</Link>
-    </>
+    <section class="bg-[#fff]">
+      <div className="max-w-[140rem] mx-0 my-auto px-[6rem] py-[3rem]">
+        <h1>Series & Movies</h1>
+        {main_data.map((curElem) => {
+          return <MovieCard key={curElem.id} {...curElem} />;
+        })}
+      </div>
+    </section>
   );
 };
 
