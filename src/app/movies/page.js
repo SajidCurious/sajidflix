@@ -18,7 +18,7 @@ const page = async () => {
 
   return (
     <section class="bg-[#fff]">
-      <div className="max-w-[140rem] mx-0 my-auto px-[6rem] py-[3rem]">
+      <div className="md:px-5">
         <h1>Series & Movies</h1>
         {main_data.map((curElem) => {
           return <MovieCard key={curElem.id} {...curElem} />;
