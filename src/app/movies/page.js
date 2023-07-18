@@ -17,9 +17,9 @@ const page = async () => {
   console.log(data);
 
   return (
-    <section class="bg-[#fff]">
-      <div className="md:px-5">
-        <h1>Series & Movies</h1>
+    <section class="bg-[#fff] flex flex-col items-center py-5 w-full mx-auto lg:px-40">
+      <h1 className="text-2xl font-bold">Series & Movies</h1>
+      <div className="w-full flex flex-wrap">
         {main_data.map((curElem) => {
           return <MovieCard key={curElem.id} {...curElem} />;
         })}
