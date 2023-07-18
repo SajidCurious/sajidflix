@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header class="body-font bg-[#222f3e] text-white">
-      <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
+    <header class="body-font bg-[#222f3e] text-white w-full">
+      <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center w-full">
         <a class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
