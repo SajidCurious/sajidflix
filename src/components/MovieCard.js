@@ -6,9 +6,9 @@ const MovieCard = (curElem) => {
   const { id, type, title, synopsis } = curElem.jawSummary;
   return (
     <>
-      <section class="text-gray-600 body-font">
-        <div class="container px-5 py-24 mx-auto">
-          <div class="flex flex-wrap -m-4 p-4 md:w-1/5">
+      <section class="text-gray-600 body-font py-4">
+        <div class="container p-5">
+          <div class="-m-4 p-4 md:max-w-sm">
             <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
               <Image
                 src={curElem.jawSummary.backgroundImage.url}
