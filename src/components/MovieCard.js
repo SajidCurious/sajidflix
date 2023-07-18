@@ -18,26 +18,14 @@ const MovieCard = (curElem) => {
                 className="w-full"
               ></Image>
               <div class="p-6">
-                <h1 class="title-font text-lg font-medium text-gray-900 mb-3">
+                <h1 class="title-font text-lg font-bold text-gray-900 mb-3">
                   {title}
                 </h1>
                 <p class="leading-relaxed mb-3">{synopsis}</p>
                 <div class="flex items-center flex-wrap ">
                   <Link href={`/movies/${id}`}>
-                    <button class="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                    <button class="text-white bg-black px-4 py-1.5 hover:bg-white hover:text-black hover:border hover:border-black inline-flex items-center md:mb-2 lg:mb-0 rounded-2xl font-medium">
                       Read More
-                      <svg
-                        class="w-4 h-4 ml-2"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        fill="none"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path d="M5 12h14"></path>
-                        <path d="M12 5l7 7-7 7"></path>
-                      </svg>
                     </button>
                   </Link>
                 </div>
