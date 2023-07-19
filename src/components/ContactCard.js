@@ -1,6 +1,12 @@
-import React from "react";
+"use client";
+import React, { useState } from "react";
 
 const ContactCard = () => {
+  const [user, setUser] = useState({
+    username: "",
+    email: "",
+    message: "",
+  });
   return (
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -86,7 +92,10 @@ const ContactCard = () => {
               className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></textarea>
           </div>
-          <button className="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg">
+          <button
+            type="submit"
+            className="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg"
+          >
             Button
           </button>
           <p className="text-xs text-gray-500 mt-3">
