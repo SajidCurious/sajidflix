@@ -1,7 +1,12 @@
+import ContactCard from "@/components/ContactCard";
 import React from "react";
 
 const page = () => {
-  return <div>contact</div>;
+  return (
+    <>
+      <ContactCard />
+    </>
+  );
 };
 
 export default page;
