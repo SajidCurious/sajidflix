@@ -28,7 +28,7 @@ const ContactCard = () => {
             </div>
             <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
-                EMAIL
+                Email
               </h2>
               <a className="text-blue-500 leading-relaxed">example@email.com</a>
               <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
@@ -46,34 +46,43 @@ const ContactCard = () => {
             Post-ironic portland shabby chic echo park, banjo fashion axe
           </p>
           <div className="relative mb-4">
-            <label for="name" className="leading-7 text-sm text-gray-600">
+            <label
+              htmlFor="username"
+              className="leading-7 text-sm text-gray-600"
+            >
               Name
             </label>
             <input
               type="text"
-              id="name"
-              name="name"
+              id="username"
+              name="username"
+              required
               className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <div className="relative mb-4">
-            <label for="email" className="leading-7 text-sm text-gray-600">
+            <label htmlFor="email" className="leading-7 text-sm text-gray-600">
               Email
             </label>
             <input
               type="email"
               id="email"
               name="email"
+              required
               className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out"
             />
           </div>
           <div className="relative mb-4">
-            <label for="message" className="leading-7 text-sm text-gray-600">
+            <label
+              htmlFor="message"
+              className="leading-7 text-sm text-gray-600"
+            >
               Message
             </label>
             <textarea
               id="message"
               name="message"
+              required
               className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
             ></textarea>
           </div>
