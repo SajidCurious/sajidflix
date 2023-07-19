@@ -4,6 +4,7 @@ import React from "react";
 
 const page = async () => {
   const url = process.env.API_KEY;
+
   const options = {
     method: "GET",
     headers: {
