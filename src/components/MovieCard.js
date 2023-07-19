@@ -19,7 +19,7 @@ const MovieCard = (curElem) => {
               ></Image>
               <div class="p-6">
                 <h1 class="title-font text-lg font-bold text-gray-900 mb-3">
-                  {title}
+                  {title.substring(0, 18)}
                 </h1>
                 <p class="leading-relaxed mb-3">{`${synopsis.substring(
                   0,
@@ -27,7 +27,7 @@ const MovieCard = (curElem) => {
                 )}  .....`}</p>
                 <div class="flex items-center flex-wrap ">
                   <Link href={`/movies/${id}`}>
-                    <button class="text-white bg-black px-4 py-1.5 hover:bg-white hover:text-black hover:border hover:border-black inline-flex items-center md:mb-2 lg:mb-0 rounded-2xl font-medium">
+                    <button class="text-white bg-black px-4 py-1.5 hover:bg-white hover:text-black border-black hover:border hover:border-black inline-flex items-center md:mb-2 lg:mb-0 rounded-2xl font-medium">
                       Read More
                     </button>
                   </Link>

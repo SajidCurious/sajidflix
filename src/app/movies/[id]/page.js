@@ -18,7 +18,10 @@ const page = async ({ params }) => {
     <div className="w-full h-full sm:w-1/2 md:w-2/4 items-center md:mx-auto py-4 px-2 ">
       <h2 className="">
         {" "}
-        <span className="text-2xl font-bold pb-4"> {main_data.type} </span>{" "}
+        <span className="text-2xl font-bold pb-4 pl-3">
+          {" "}
+          {main_data.type}{" "}
+        </span>{" "}
       </h2>
       <div className="border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden sm:px-10 md:px-0">
         <div>
