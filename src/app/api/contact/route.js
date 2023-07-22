@@ -1,13 +1,13 @@
-import dbConn from "@/utils/dbConn";
-import Contact from "@/models/contact";
+import dbconnect from "@/utils/dbconnect";
+import contact from "@/models/contact";
 import { NextResponse } from "next/server";
 
 export async function POST(req, res) {
   try {
     const body = await req.json();
-    await dbConn();
+    await dbconnect();
 
-    await Contact.create(body);
+    await contact.create(body);
 
     return NextResponse.json(
       {
