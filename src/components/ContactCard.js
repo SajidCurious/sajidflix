@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const ContactCard = () => {
@@ -7,6 +8,7 @@ const ContactCard = () => {
     email: "",
     message: "",
   });
+  const [status, setStatus] = useState(null);
 
   const handleChange = (e) => {
     const name = e.target.name;
@@ -15,7 +17,34 @@ const ContactCard = () => {
     setUser((prevUser) => ({ ...prevUser, [name]: value }));
   };
 
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: { Content_Type: "application/json" },
+        body: JSON.stringify({
+          username: user.username,
+          email: user.email,
+          message: user.message,
+        }),
+      });
+      // Set the status based on the response from the API route
+      if (response.status === 200) {
+        setUser({
+          username: "",
+          email: "",
+          message: "",
+        });
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (e) {
+      console.log(e);
+    }
+  };
 
   return (
     <section className="text-gray-600 body-font relative">
@@ -42,28 +71,18 @@ const ContactCard = () => {
                 ADDRESS
               </h2>
               <p className="mt-1">
-                Photo booth tattooed prism, portland taiyaki hoodie neutra
-                typewriter
+                Sajidflix, opposite Mufakkamjah College of Engineering, Banjara
+                Hills, Hyderabad, Telangana, India
               </p>
-            </div>
-            <div className="lg:w-1/2 px-6 mt-4 lg:mt-0">
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs">
-                Email
-              </h2>
-              <a className="text-blue-500 leading-relaxed">example@email.com</a>
-              <h2 className="title-font font-semibold text-gray-900 tracking-widest text-xs mt-4">
-                PHONE
-              </h2>
-              <p className="leading-relaxed">123-456-7890</p>
             </div>
           </div>
         </div>
         <div className="lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
           <h2 className="text-gray-900 text-lg mb-1 font-medium title-font">
-            Feedback
+            Contact Us
           </h2>
           <p className="leading-relaxed mb-5 text-gray-600">
-            Post-ironic portland shabby chic echo park, banjo fashion axe
+            We'll respond as soon as possible
           </p>
           <form onSubmit={handleSubmit}>
             <div className="relative mb-4">
@@ -119,16 +138,24 @@ const ContactCard = () => {
                 className="w-full bg-white rounded border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 h-32 text-base outline-none text-gray-700 py-1 px-3 resize-none leading-6 transition-colors duration-200 ease-in-out"
               ></textarea>
             </div>
-            <button
-              type="submit"
-              className="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg"
-            >
-              Button
-            </button>
-            <p className="text-xs text-gray-500 mt-3">
-              Chicharrones blog helvetica normcore iceland tousled brook viral
-              artisan.
-            </p>
+            <div>
+              {status === "success" && (
+                <p className="">Thank you for your message!</p>
+              )}
+              {status === "error" && (
+                <p className="">
+                  There was an error submitting your message. Please try again.
+                </p>
+              )}
+              <Link href="/">
+                <button
+                  type="submit"
+                  className="text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg"
+                >
+                  Submit
+                </button>
+              </Link>
+            </div>
           </form>
         </div>
       </div>
