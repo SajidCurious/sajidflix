@@ -64,7 +64,7 @@ const Header = () => {
         className={
           !nav
             ? "hidden"
-            : "mobileNav relative top-2 left-0 w-full bg-[#1e272e] flex flex-col justify-center items-center text-center space-y-6 pt-10 pb-10"
+            : "mobileNav relative top-2 left-0 bg-gray-400 flex flex-col justify-center items-center text-center space-y-6 pt-10 pb-10 ml-4 mr-4"
         }
       >
         <li>
