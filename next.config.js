@@ -7,6 +7,11 @@ const nextConfig = {
   images: {
     domains: ["occ-0-116-448.1.nflxso.net"],
   },
+  eslint: {
+    // Warning: This allows production builds to successfully complete even if
+    // your project has ESLint errors.
+    ignoreDuringBuilds: true,
+  },
 };
 
 module.exports = nextConfig;

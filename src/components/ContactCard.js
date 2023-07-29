@@ -53,9 +53,9 @@ const ContactCard = () => {
             Contact Us
           </h2>
           <p className="leading-relaxed mb-5 text-gray-600">
-            We'll respond as soon as possible
+            We&apos;ll respond as soon as possible
           </p>
-          <form onSubmit={handleSubmit}>
+          <form>
             <div className="relative mb-4">
               <label
                 htmlFor="username"
