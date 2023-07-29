@@ -68,22 +68,34 @@ const Header = () => {
         }
       >
         <li>
-          <Link href="/" className="cursor-pointer text-white text-2xl">
+          <Link
+            href="/"
+            className="cursor-pointer text-white bg-black px-4 py-1.5 hover:bg-white hover:text-black border-black hover:border hover:border-blacktext-2xl rounded-2xl font-medium "
+          >
             Home
           </Link>
         </li>
         <li>
-          <Link href="/about" className="cursor-pointer text-white text-2xl ">
+          <Link
+            href="/about"
+            className="cursor-pointer text-white bg-black px-4 py-1.5 hover:bg-white hover:text-black border-black hover:border hover:border-blacktext-2xl rounded-2xl font-medium "
+          >
             About
           </Link>
         </li>
         <li>
-          <Link href="/movies" className="cursor-pointer text-white text-2xl">
+          <Link
+            href="/movies"
+            className="cursor-pointer text-white bg-black px-4 py-1.5 hover:bg-white hover:text-black border-black hover:border hover:border-blacktext-2xl rounded-2xl font-medium"
+          >
             Movies
           </Link>
         </li>
         <li>
-          <Link href="/contact" className="cursor-pointer text-white text-2xl">
+          <Link
+            href="/contact"
+            className="cursor-pointer text-white bg-black px-4 py-1.5 hover:bg-white hover:text-black border-black hover:border hover:border-blacktext-2xl rounded-2xl font-medium"
+          >
             Contact
           </Link>
         </li>
