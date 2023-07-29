@@ -17,35 +17,6 @@ const ContactCard = () => {
     setUser((prevUser) => ({ ...prevUser, [name]: value }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    // try {
-    //   const response = await fetch("/api/contact", {
-    //     method: "POST",
-    //     headers: { Content_Type: "application/json" },
-    //     body: JSON.stringify({
-    //       username: user.username,
-    //       email: user.email,
-    //       message: user.message,
-    //     }),
-    //   });
-    //   // Set the status based on the response from the API route
-    //   if (response.status === 200) {
-    //     setUser({
-    //       username: "",
-    //       email: "",
-    //       message: "",
-    //     });
-    //     setStatus("success");
-    //   } else {
-    //     setStatus("error");
-    //   }
-    // } catch (e) {
-    //   console.log(e);
-    // }
-  };
-
   return (
     <section className="text-gray-600 body-font relative">
       <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
@@ -139,14 +110,6 @@ const ContactCard = () => {
               ></textarea>
             </div>
             <div>
-              {/* {status === "success" && (
-                <p className="">Thank you for your message!</p>
-              )}
-              {status === "error" && (
-                <p className="">
-                  There was an error submitting your message. Please try again.
-                </p>
-              )} */}
               <Link href="/">
                 <button
                   type="submit"
