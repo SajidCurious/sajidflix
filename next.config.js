@@ -12,6 +12,8 @@ const nextConfig = {
     // your project has ESLint errors.
     ignoreDuringBuilds: true,
   },
+  unstable_runtimeJS: false,
+  distDir: "build",
 };
 
 module.exports = nextConfig;

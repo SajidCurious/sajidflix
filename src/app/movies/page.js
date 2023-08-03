@@ -1,3 +1,4 @@
+"use client";
 import MovieCard from "@/components/MovieCard";
 import React from "react";
 

@@ -1,3 +1,4 @@
+"use client";
 import ContactCard from "@/components/ContactCard";
 import React from "react";
 

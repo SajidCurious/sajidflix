@@ -37,6 +37,7 @@ const Header = () => {
             <li>
               <Link
                 href="/movies"
+                prefetch={false}
                 className=" hover:text-blue-200 cursor-pointer"
               >
                 Movies
