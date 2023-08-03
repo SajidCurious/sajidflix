@@ -13,14 +13,14 @@ const Header = () => {
   };
   return (
     <>
-      <header class="body-font bg-[#222f3e] text-white w-full ">
-        <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row w-full">
+      <header className="body-font bg-[#222f3e] text-white w-full ">
+        <div className="container mx-auto flex flex-wrap p-4 flex-col md:flex-row w-full">
           <Link href="/">
-            <span class="ml-3 text-xl font-semibold text-white cursor-pointer sm:mb-32">
+            <span className="ml-3 text-xl font-semibold text-white cursor-pointer sm:mb-32">
               SAJIDFLIX
             </span>
           </Link>
-          <nav class="md:ml-auto hidden md:flex flex-wrap items-center text-base justify-center list-none font-semibold space-x-10">
+          <nav className="md:ml-auto hidden md:flex flex-wrap items-center text-base justify-center list-none font-semibold space-x-10">
             <li>
               <Link href="/" className=" hover:text-blue-200 cursor-pointer">
                 Home
