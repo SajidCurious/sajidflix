@@ -26,14 +26,14 @@ const ContactCard = () => {
             width="100%"
             height="100%"
             style={{ border: 0 }}
-            allowfullscreen=""
+            allowFullScreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            class="absolute inset-0"
-            frameborder="0"
+            referrerPolicy="no-referrer-when-downgrade"
+            className="absolute inset-0"
+            frameBorder="0"
             title="map"
-            marginheight="0"
-            marginwidth="0"
+            marginHeight="0"
+            marginWidth="0"
             scrolling="no"
           ></iframe>
           <div className="bg-white relative flex flex-wrap py-6 rounded shadow-md">
